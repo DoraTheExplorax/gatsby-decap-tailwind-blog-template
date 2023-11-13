@@ -21,6 +21,9 @@ module.exports = {
     },
   },
   plugins: [
+    //Decap CMS plugin and dependencies
+    `gatsby-plugin-netlify-cms`,
+    //Gatsby Blog Start included plugins
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
