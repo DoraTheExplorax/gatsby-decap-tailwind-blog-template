@@ -23,6 +23,8 @@ module.exports = {
   plugins: [
     //Decap CMS plugin and dependencies
     `gatsby-plugin-netlify-cms`,
+    //Tailwind req plugins
+    `gatsby-plugin-postcss`,
     //Gatsby Blog Start included plugins
     `gatsby-plugin-image`,
     {
