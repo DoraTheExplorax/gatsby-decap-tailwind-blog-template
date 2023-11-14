@@ -1,20 +1,18 @@
 # Gatsby Decap Tailwind Blog Template
 
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="./static/gatsby.svg" width="60" />
-  </a>
-  <img alt="+" src="./static/plus.svg" width="30"  style="padding: 20px 10px"/>
-    <a href="https://decapcms.org/">
-    <img alt="Decap CMS" src="./static/decap-cms.svg" width="60" />
-  </a>
-  <img alt="+" src="./static/plus.svg" width="30" style="padding: 20px 10px"/>
-    <a href="https://tailwindcss.com/">
-    <img alt="Tailwind CSS" src="./static/tailwindcss.svg" width="60" />
-  </a>
-</p>
+<div align="center">
+  <img alt="Gatsby" src="./static/gatsby.svg" width="60" align="center" />
+  &nbsp;
+  <img alt="+" src="./static/plus.svg" width="25" align="center"/>
+  &nbsp;
+  <img alt="Decap CMS" src="./static/decap-cms.svg" width="60" align="center" />
+  &nbsp;
+  <img alt="+" src="./static/plus.svg" width="25" align="center" />
+  &nbsp;
+  <img alt="Tailwind CSS" src="./static/tailwindcss.svg" width="60" align="center" />
+</div>
 <h1 align="center">
-  Gatsby's blog starter
+  Gatsby Decap CMS Tailwind Blog Starter
 </h1>
 
 A template for a brochure/basic business website, powered by Gatsby and Decap CMS. Styling done with TailwindCSS & DaisyUI.
@@ -31,7 +29,7 @@ Coming Soon
 
 ## Acknowledgements & Credit
 
-Based on the official Gatsby Blog Starter, get it [here](https://github.com/gatsbyjs/gatsby-starter-blog)
+Based on the official Gatsby Blog Starter, get it [here](https://github.com/gatsbyjs/gatsby-starter-blog).
 
 CMS integration with [decap-cms-app](https://github.com/decaporg/decap-cms/tree/master) and [gatsby-plugin-netlify-cms](https://www.gatsbyjs.com/plugins/gatsby-plugin-netlify-cms/). Official setup and integration instructions [here](https://decapcms.org/docs/gatsby/).
-Tailwind setup and integration instructions [here](https://tailwindcss.com/docs/guides/gatsby)
+Tailwind setup and integration instructions [here](https://tailwindcss.com/docs/guides/gatsby).
