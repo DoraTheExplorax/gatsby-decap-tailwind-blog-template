@@ -4,11 +4,11 @@
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="./static/gatsby.svg" width="60" />
   </a>
-  <img alt="+" src="./static/plus.svg" width="40" />
+  <img alt="+" src="./static/plus.svg" width="30"  style="padding: 20px 10px"/>
     <a href="https://decapcms.org/">
     <img alt="Decap CMS" src="./static/decap-cms.svg" width="60" />
   </a>
-  <img alt="+" src="./static/plus.svg" width="40" />
+  <img alt="+" src="./static/plus.svg" width="30" style="padding: 20px 10px"/>
     <a href="https://tailwindcss.com/">
     <img alt="Tailwind CSS" src="./static/tailwindcss.svg" width="60" />
   </a>
