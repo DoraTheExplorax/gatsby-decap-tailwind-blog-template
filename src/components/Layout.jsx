@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import Header from "./Header"
+import Footer from "./Footer"
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
+  /*   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
 
@@ -18,10 +19,10 @@ const Layout = ({ location, title, children }) => {
         {title}
       </Link>
     )
-  }
+  } */
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    /*     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
@@ -29,6 +30,14 @@ const Layout = ({ location, title, children }) => {
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
+    </div> */
+    <div className="flex flex-col h-screen">
+      <Header />
+      <hr />
+      <div className="lg:container lg:mx-auto px-4 md:px-8 lg:px-16">
+        <main className="mt-2 sm:mt-6">{children}</main>
+      </div>
+      <Footer />
     </div>
   )
 }
