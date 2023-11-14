@@ -2,33 +2,22 @@ import * as React from "react"
 import { useState, useEffect } from "react"
 
 const ThemeToggle = () => {
-  // init theme from browser preference OR if we already have it saved in session
-  const darkMode = window.matchMedia("(prefers-color-scheme: dark)")
-  const [theme, setTheme] = useState(
-    sessionStorage.getItem("theme") || (darkMode ? "dark" : "light")
-  )
+  const [darkMode, setDarkMode] = useState(false) //light by default -- FOR NOW
+
+  useEffect(() => {
+    /*  if (typeof window !== `undefined`) {
+      const isDark = window.matchMedia("(prefers-color-scheme: dark)") //use as bool
+      //setTheme(sessionStorage.getItem("theme") || (isDark ? "dark" : "light"))
+    } */
+    document
+      .querySelector("html")
+      .setAttribute("data-theme", darkMode ? "dark" : "light")
+  }, [darkMode])
 
   // update state on toggle
   const handleToggle = e => {
-    if (e.target.checked) {
-      setTheme("dark")
-    } else {
-      setTheme("light")
-    }
+    setDarkMode(e.target.checked)
   }
-
-  darkMode.addEventListener("change", e => {
-    //check if user changed their browser preference
-    setTheme(e.matches ? "dark" : "light")
-  })
-
-  useEffect(() => {
-    sessionStorage.setItem("theme", theme)
-    const sessionTheme = sessionStorage.getItem("theme")
-    //add custom data-theme attribute to html tag required to update theme using DaisyUI
-    document.querySelector("html").setAttribute("data-theme", sessionTheme)
-    //console.log("made it here! -- the useEffect I mean");
-  }, [theme]) //this runs on load, and is triggered again whenever theme changes
 
   return (
     <label className="swap swap-rotate">
@@ -36,8 +25,8 @@ const ThemeToggle = () => {
       <input
         type="checkbox"
         onChange={handleToggle}
-        // show toggle image based on sessionstorage theme
-        checked={theme === "light" ? false : true}
+        // show toggle image based on darkMode value
+        checked={darkMode}
         className="theme-controller"
       />
 
