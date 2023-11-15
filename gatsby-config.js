@@ -21,6 +21,9 @@ module.exports = {
       instagram: `piratechnics`,
     },
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     //Decap CMS plugin and dependencies
     `gatsby-plugin-netlify-cms`,

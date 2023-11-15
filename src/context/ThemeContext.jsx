@@ -5,6 +5,7 @@ const getInitialTheme = () => {
   const sessionTheme =
     typeof window !== `undefined` && sessionStorage.getItem("theme")
   const browserIsDark =
+    typeof window !== `undefined` &&
     document.querySelector("html").getAttribute("data-theme") === "dark"
 
   /*   //Now Instantiate the daisy theme (it won't exist on first load)
