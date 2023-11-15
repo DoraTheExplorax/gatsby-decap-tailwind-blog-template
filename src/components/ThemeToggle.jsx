@@ -3,28 +3,6 @@ import { ThemeContext } from "../context/ThemeContext"
 import { useContext } from "react"
 
 const ThemeToggle = () => {
-  /*   const isDark = useRef(
-    typeof window !== `undefined` &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-  )
-  const [theme, setTheme] = useState(
-    typeof window !== `undefined` &&
-      (sessionStorage.getItem("theme") || (isDark ? "dark" : "light"))
-  )
-
-  const swapTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-    //update isDark and sessionStorage
-    isDark.current = theme === "dark" ? true : false
-    sessionStorage.setItem("theme", theme)
-    console.log("we swapped it!")
-  }
-
-  //set on first load, and listen for theme changes
-  useEffect(() => {
-    document.querySelector("html").setAttribute("data-theme", theme)
-  }, [theme]) */
-
   const { theme, setTheme } = useContext(ThemeContext)
 
   //MINOR bug: when browser is in "light" mode, first load still shows moon icon initially
@@ -37,14 +15,11 @@ const ThemeToggle = () => {
       <input
         type="checkbox"
         //className="theme-controller"
-        checked={theme === "dark"}
+        defaultChecked={theme === "dark"}
         onChange={e => {
-          // update isDark --> if box checked, it's dark mode
           setTheme(e.target.checked ? "dark" : "light")
-          //isDark.current = e.target.checked ? false : true
 
           console.log("what mode is it: " + theme)
-          //console.log("is it Dark? " + isDark.current)
         }}
       />
       {/* sun icon */}

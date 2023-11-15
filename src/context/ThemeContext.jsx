@@ -1,8 +1,9 @@
 import * as React from "react"
-import { createContext, useState, useRef } from "react"
+import { createContext, useState } from "react"
 
 const getInitialTheme = () => {
-  const sessionTheme = sessionStorage.getItem("theme")
+  const sessionTheme =
+    typeof window !== `undefined` && sessionStorage.getItem("theme")
   const browserIsDark =
     document.querySelector("html").getAttribute("data-theme") === "dark"
 
